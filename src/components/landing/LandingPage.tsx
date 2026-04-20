@@ -62,13 +62,18 @@ export default function LandingPage() {
         ref={containerRef}
         className="h-full overflow-y-auto snap-y snap-mandatory"
       >
-        {sections.map((section, index) => (
-          <Section
-            key={section.id}
-            {...section}
-            isActive={index === activeSection}
-          />
-        ))}
+        {sections.map((section, index) => {
+          const isActive = index === activeSection
+          const { customContentComponent: CustomContent, ...rest } = section as typeof section & { customContentComponent?: React.ComponentType<{ isActive: boolean }> }
+          return (
+            <Section
+              key={section.id}
+              {...rest}
+              isActive={isActive}
+              customContent={CustomContent ? <CustomContent isActive={isActive} /> : undefined}
+            />
+          )
+        })}
       </div>
     </Layout>
   )
