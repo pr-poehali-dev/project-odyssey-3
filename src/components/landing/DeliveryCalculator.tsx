@@ -72,7 +72,7 @@ export default function DeliveryCalculator({ isActive }: { isActive: boolean }) 
           <Button
             variant="outline"
             className="text-white bg-transparent border-white/40 hover:bg-white hover:text-black transition-colors"
-            onClick={() => window.open("https://max.ru/79333381260", "_blank")}
+            onClick={() => window.open("https://max.ru/u/f9LHodD0cOKYQkj3JyM0drJlgrOvIrboq92z46Qr_4VXB7vyRCel9FmKCws", "_blank")}
           >
             MAX
           </Button>

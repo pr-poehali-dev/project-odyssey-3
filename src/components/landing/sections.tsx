@@ -99,7 +99,7 @@ export const sections = [
     buttonText: 'Написать в Telegram',
     buttonHref: 'https://t.me/levikzzz',
     button2Text: 'Написать в MAX',
-    button2Href: 'https://max.ru/79333381260',
+    button2Href: 'https://max.ru/u/f9LHodD0cOKYQkj3JyM0drJlgrOvIrboq92z46Qr_4VXB7vyRCel9FmKCws',
   },
   {
     id: 'about',
