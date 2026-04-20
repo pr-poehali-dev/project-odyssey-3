@@ -8,6 +8,8 @@ export interface Section {
   showButton?: boolean
   buttonText?: string
   buttonHref?: string
+  button2Text?: string
+  button2Href?: string
   customContent?: ReactNode
   titleSize?: "normal" | "small"
 }

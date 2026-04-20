@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import type { SectionProps } from "@/types"
 
-export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, buttonHref, customContent, titleSize }: SectionProps) {
+export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, buttonHref, button2Text, button2Href, customContent, titleSize }: SectionProps) {
   const titleClass = titleSize === "small"
     ? "text-3xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.1] tracking-tight max-w-4xl text-white"
     : "text-4xl md:text-6xl lg:text-[5rem] xl:text-[6rem] font-bold leading-[1.1] tracking-tight max-w-4xl text-white"
@@ -43,7 +43,7 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
           initial={{ opacity: 0, y: 20 }}
           animate={isActive ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-12 md:mt-16"
+          className="mt-12 md:mt-16 flex flex-wrap gap-4"
         >
           <Button
             variant="outline"
@@ -53,6 +53,16 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
           >
             {buttonText}
           </Button>
+          {button2Text && button2Href && (
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-white bg-transparent border-white/40 hover:bg-white hover:text-black transition-colors"
+              onClick={() => window.open(button2Href, "_blank")}
+            >
+              {button2Text}
+            </Button>
+          )}
         </motion.div>
       )}
     </section>

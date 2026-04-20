@@ -61,13 +61,22 @@ export default function DeliveryCalculator({ isActive }: { isActive: boolean }) 
           <p className="text-white/50 text-sm">Примерная стоимость</p>
           <p className="text-3xl font-bold text-white mt-1">~{total.toLocaleString("ru-RU")} ₽</p>
         </div>
-        <Button
-          variant="outline"
-          className="text-[#FF4D00] bg-transparent border-[#FF4D00] hover:bg-[#FF4D00] hover:text-black transition-colors"
-          onClick={() => window.open("https://t.me/levikzzz", "_blank")}
-        >
-          Заказать
-        </Button>
+        <div className="flex flex-col gap-2">
+          <Button
+            variant="outline"
+            className="text-[#FF4D00] bg-transparent border-[#FF4D00] hover:bg-[#FF4D00] hover:text-black transition-colors"
+            onClick={() => window.open("https://t.me/levikzzz", "_blank")}
+          >
+            Telegram
+          </Button>
+          <Button
+            variant="outline"
+            className="text-white bg-transparent border-white/40 hover:bg-white hover:text-black transition-colors"
+            onClick={() => window.open("https://max.ru/79333381260", "_blank")}
+          >
+            MAX
+          </Button>
+        </div>
       </div>
       <p className="text-white/30 text-xs mt-3">* Итоговая цена рассчитывается по большему из двух параметров: вес или объём</p>
     </motion.div>
